@@ -58,3 +58,23 @@ table input{
     width: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.gamma_value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width:300px ;
+    border: 0.4px solid ;
+    padding: 10px;
+    background-color: rgb(183, 205, 210);
+
+}
+.gamma_value input{
+    border: 0;
+    outline: 0;
+    background-color: rgb(183, 205, 210);
+    padding: 5px 2px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
