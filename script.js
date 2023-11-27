@@ -29,11 +29,21 @@ const inputMatrix =   getMatrixValues("inputMatrix");
     console.log("input Matrix" , inputMatrix)
 
     const resultMatrix = inputMatrix.map((row)=>(
-        row.map((value)=>{
-            console.log( `c x ${value} ^ 0.6 = ${value ** 0.6} ` )
-                value = value ** 0.6
+        row.map((value , result)=>{
+            
+            // console.log( `c x ${value} ^ 0.6 = ${value ** 0.6} ` )
 
-                return value
+            value = value/255;
+            result = value** 0.6
+        
+
+
+                // value = value ** 0.6
+
+                console.log("normalized value= ",  value)
+                console.log( "result =  ",  result)
+
+                return result
         })
 
     ))
