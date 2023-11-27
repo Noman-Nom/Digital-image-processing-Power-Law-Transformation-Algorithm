@@ -1,14 +1,24 @@
+const getMatrixValues = (inputMatrix) => {
+  const table = document.getElementById(inputMatrix);
+  console.log(table);
+  // console.log(table.rows)
+  const values = [];
 
+  for (let i = 0; i < table.rows.length; i++) {
+    values[i] = [];
+    // console.log(values)
 
-const getMatrixValues = (inputMatrix)=>{
+    for (let j = 0; j < table.rows[i].cells.length; j++) {
+      const input = table.rows[i].cells[j].querySelector("input");
+    //   console.log(input.value);
 
-    const table = document.getElementById(inputMatrix)
-    // console.log(table)
-    // console.log(table.rows)
-}
+    values[i][j] = parseInt(input.values)
 
-const calculate=()=>{
+    console.log(values)
+    }
+  }
+};
 
-    getMatrixValues('inputMatrix')
-  
-}
+const calculate = () => {
+  getMatrixValues("inputMatrix");
+};
