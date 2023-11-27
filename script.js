@@ -25,16 +25,21 @@ return values
 
 const calculate = () => {
 const inputMatrix =   getMatrixValues("inputMatrix");
+        const gamma = parseFloat(document.getElementById('gamaValue').value)
+            // console.log("value of gamma", gamma)
+            // console.log(typeof gamma)
+
 
     console.log("input Matrix" , inputMatrix)
 
     const resultMatrix = inputMatrix.map((row)=>(
         row.map((value , result)=>{
             
-            // console.log( `c x ${value} ^ 0.6 = ${value ** 0.6} ` )
-
             value = value/255;
-            result = (value** 0.6).toFixed(2)
+            console.log( `c x ${value} ^ ${gamma} = ${value ** gamma} ` )
+            console.log( 'gamma = ', gamma)
+
+            result = (value** gamma).toFixed(2)
         
 
 
