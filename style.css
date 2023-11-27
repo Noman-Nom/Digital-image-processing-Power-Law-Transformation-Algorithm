@@ -32,6 +32,18 @@ table {
     
 }
 
+button{
+    padding: 10px 11px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgb(183, 205, 210);
+    width: 150px;
+}
+
 table, th, td {
     border: 1px solid black;
     padding: 5px;
