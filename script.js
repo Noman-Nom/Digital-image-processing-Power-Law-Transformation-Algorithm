@@ -34,19 +34,52 @@ const inputMatrix =   getMatrixValues("inputMatrix");
             // console.log( `c x ${value} ^ 0.6 = ${value ** 0.6} ` )
 
             value = value/255;
-            result = value** 0.6
+            result = (value** 0.6).toFixed(2)
         
 
 
                 // value = value ** 0.6
 
-                console.log("normalized value= ",  value)
-                console.log( "result =  ",  result)
+                // console.log("normalized value= ",  value)
+                // console.log( "result =  ",  result)
 
                 return result
         })
 
     ))
 
+    console.log("result matrix = " , resultMatrix)
+
+    displayMatrix("resultMatrix" , resultMatrix)
+
 
 };
+
+const displayMatrix = (resultMatrix , result)=>{
+
+    const table = document.getElementById(resultMatrix)
+    console.log("final dispaly result" , table)
+
+    //  clearing prev content from matrix 
+
+    while(table.rows.length>0){
+        table.deleteRow(0)
+    }
+
+    for (let i = 0; i < result.length; i++) {
+        const row = table.insertRow(i)
+        // console.log(row)
+        for (let j = 0; j < result[i].length; j++) {
+            const cell = row.insertCell(j)
+            // console.log(cell)
+
+            cell.appendChild(document.createTextNode(result[i][j]))
+            
+        }
+        console.log(`final row ${i}`, row)
+        
+    }
+
+
+
+}
