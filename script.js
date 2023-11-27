@@ -10,13 +10,17 @@ const getMatrixValues = (inputMatrix) => {
 
     for (let j = 0; j < table.rows[i].cells.length; j++) {
       const input = table.rows[i].cells[j].querySelector("input");
-    //   console.log(input.value);
+    //   console.log( typeof input.value);
+      console.log(input.value)   
 
-    values[i][j] = parseInt(input.values)
+    values[i][j] = parseInt(input.value)
 
-    console.log(values)
-    }
-  }
+}
+}
+// console.log(typeof values)
+// console.log(values)
+console.log("input values = " , values);   // it give me answer NAN wwhat is the probelm here
+return values
 };
 
 const calculate = () => {
